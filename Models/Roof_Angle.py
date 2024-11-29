@@ -3,15 +3,15 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Define the location
-latitude = 44.2334  # Example latitude
-longitude = -76.4930  # Example longitude
-tz = 'Etc/GMT+5'  # Example timezone
+# Kingston, On
+latitude = 44.2334  
+longitude = -76.4930
+tz = 'Etc/GMT+5'
 
 # Create a location object
 location = pvlib.location.Location(latitude, longitude, tz=tz)
 
-# Define the time range
+# Define the time range (all of 2023, hourly)
 times = pd.date_range(start='2023-01-01', end='2023-12-31', freq='H', tz=tz)
 
 # Get solar position
